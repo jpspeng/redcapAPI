@@ -378,10 +378,10 @@ exportRecords.redcapApiConnection <-
     meta_data <- subset(meta_data, !meta_data$field_type %in% "descriptive")
     
     #* Check that stated forms exist
-    if (any(!forms %in% unique(meta_data$form_name))){
-        stop(paste0("'", paste(forms[!forms %in% unique(meta_data$form_name)], collapse="', '"),
-                   " are not valid form names"))
-      }
+    # if (any(!forms %in% unique(meta_data$form_name))){
+    #    stop(paste0("'", paste(forms[!forms %in% unique(meta_data$form_name)], collapse="', '"),
+    #               " are not valid form names"))
+    #  }
     
     #* Create list of field names
     if (!is.null(fields)) #* fields were provided
